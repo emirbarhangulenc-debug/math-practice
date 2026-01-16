@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoş Geldiniz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Web Sitem</div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Anasayfa</a></li>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="anasayfa" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hoş Geldiniz</h1>
+            <p class="hero-subtitle">Modern ve profesyonel web çözümleri</p>
+            <button class="cta-button">Hemen Başlayın</button>
+        </div>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <section id="hakkimda" class="about">
+        <div class="container">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Merhaba! Ben Hasan. Modern web teknolojileri kullanarak 
+                        kullanıcı dostu ve estetik web siteleri tasarlıyorum.
+                    </p>
+                    <p>
+                        Deneyimli ve yenilikçi yaklaşımla, her projeye özel çözümler sunuyorum.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">👤</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hizmetler" class="services">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Web Tasarım</h3>
+                    <p>Modern ve responsive web tasarımları</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Web Geliştirme</h3>
+                    <p>Hızlı ve güvenli web uygulamaları</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobil Uyumlu</h3>
+                    <p>Tüm cihazlarda mükemmel görünüm</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>UI/UX Tasarım</h3>
+                    <p>Kullanıcı odaklı tasarım çözümleri</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Adınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-posta Adresiniz" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="Mesajınız" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web Sitem. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

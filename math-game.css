@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #667eea;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+.game-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #f9fafb;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-label {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.stat-value.correct {
+    color: #10b981;
+}
+
+.stat-value.wrong {
+    color: #ef4444;
+}
+
+.stat-value.time {
+    color: #f59e0b;
+}
+
+.game-area {
+    margin-bottom: 30px;
+}
+
+.question-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.answer-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#answerInput {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    border: 3px solid #e5e7eb;
+    border-radius: 10px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+#answerInput:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.feedback {
+    min-height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.feedback.correct {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+.feedback.wrong {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.feedback.hidden {
+    opacity: 0;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-start,
+.btn-reset {
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-start:hover,
+.btn-reset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-reset {
+    background: #f59e0b;
+}
+
+.btn-reset:hover {
+    box-shadow: 0 5px 20px rgba(245, 158, 11, 0.4);
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #10b981 0%, #667eea 100%);
+    width: 100%;
+    transition: width 0.1s linear;
+    border-radius: 5px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.stat-value.time.warning {
+    animation: pulse 1s infinite;
+    color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .question {
+        font-size: 1.8rem;
+    }
+
+    .answer-container {
+        flex-direction: column;
+    }
+
+    #answerInput {
+        font-size: 1.1rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .game-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

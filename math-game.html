@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Oyunu</title>
+    <link rel="stylesheet" href="math-game.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧮 Matematik Oyunu</h1>
+            <p class="subtitle">Ne kadar hızlı ve doğru cevap verebilirsin?</p>
+        </header>
+
+        <div class="game-stats">
+            <div class="stat-card">
+                <div class="stat-label">Seviye</div>
+                <div class="stat-value" id="level">1</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Doğru</div>
+                <div class="stat-value correct" id="correct">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Yanlış</div>
+                <div class="stat-value wrong" id="wrong">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Kalan Süre</div>
+                <div class="stat-value time" id="timer">30</div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="question-container">
+                <div class="question" id="question">
+                    Hazır mısın? Başlamak için "Başla" butonuna tıkla!
+                </div>
+            </div>
+
+            <div class="answer-container" id="answerContainer" style="display: none;">
+                <input type="number" id="answerInput" placeholder="Cevabınızı girin" autofocus>
+                <button class="btn-primary" id="submitBtn">Cevap Ver</button>
+            </div>
+
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-start" id="startBtn">Başla</button>
+            <button class="btn-reset" id="resetBtn" style="display: none;">Yeniden Başla</button>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="math-game.js"></script>
+</body>
+</html>
